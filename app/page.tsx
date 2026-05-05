@@ -2,37 +2,38 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { image } from 'framer-motion/client';
 
 const features = [
   {
-    title: 'Music-Centered Discovery',
+    title: 'Music-Based Compatibility',
     description:
-      'MixMatch builds its identity around music-inspired discovery, giving the experience a stronger personality while making profile exploration feel more memorable and engaging.',
+      'MixMatch matches users based on shared music taste, including common artists, genres, and anthem choices, so connections start from meaningful similarities instead of only appearance.',
   },
   {
-    title: 'Structured Match Browsing',
+    title: 'AI-Assisted Match Scoring',
     description:
-      'Users can switch between organized categories such as All, Date, and Friend, creating a cleaner and more intentional way to explore connections.',
+      'The system uses AI to analyze compatibility between users and generate a match score based on music preferences and profile information. This helps improve recommendation quality without making AI the only factor in matching.',
   },
   {
-    title: 'Interactive Profile Cards',
+    title: 'Guided Onboarding Filters',
     description:
-      'The main matching experience emphasizes bold profile presentation, anthem-based identity, and streamlined interaction through a visually rich card layout.',
+      'Users complete a structured onboarding process that collects key profile details such as dating intention, gender preference, age range, location, distance, lifestyle, education, and music interests.',
   },
   {
-    title: 'Real-Time Messaging',
+    title: 'Mode-Based Discovery',
     description:
-      'Matched users can continue the experience through direct conversation in a focused chat interface designed for clarity, ease of use, and modern presentation.',
+      'MixMatch separates discovery into Dating and Friend modes, allowing users to explore connections based on their intention while keeping the matching experience organized and intentional.',
   },
   {
-    title: 'Profile Management',
+    title: 'Profile Cards with Music Identity',
     description:
-      'Users can preview, manage, and refine their profile through a dedicated account screen that supports customization and profile editing.',
+      'The main matching screen presents each user with profile photos, personal details, and music identity, making it easier to understand both attraction and shared interests before interacting.',
   },
   {
-    title: 'Unified Dark Interface',
+    title: 'Progressive Messaging Experience',
     description:
-      'The application uses a consistent black-and-purple design language with rounded layouts, soft glows, and modern spacing across all major screens.',
+      'Matched users can chat in real time, and deeper interaction features such as voice calls are introduced after enough conversation, encouraging users to build trust before moving forward.',
   },
 ];
 
@@ -67,7 +68,9 @@ const stack = [
   'React Native',
   'Expo',
   'Firebase',
-  'TypeScript / JavaScript',
+  'TypeScript',
+  'Google Gemini',
+  'iTunes API',
   'GitHub',
   'UI / UX Prototyping',
 ];
@@ -84,10 +87,10 @@ const screenshots = [
     desc: 'The likes interface organizes connections into All, Date, and Friend categories for a cleaner and more flexible browsing experience.',
   },
   {
-  src: '/feed.jpg',
-  title: 'Feed Screen',
-  desc: 'The feed screen showcases user anthems and events whhich helps users explore new songs and events.',
-},
+    src: '/feed.jpg',
+    title: 'Feed Screen',
+    desc: 'The feed screen highlights user anthems and music-related events, helping users discover new songs, interests, and shared experiences.',
+  },
   {
     src: '/profile.jpg',
     title: 'Profile Screen',
@@ -95,34 +98,34 @@ const screenshots = [
   },
 ];
 
-  const teamMembers = [
+const teamMembers = [
   {
-    name: 'Rabdeep Singh',
-    role: 'Frontend Development & Website Design',
-    image: '/team/rabdeep.jpg',
+    name: 'Dean Husan',
+    role: 'Backend & Frontend Development',
+    image: '/dean.jpg',
     description:
-      'Focused on interface presentation, visual refinement, and the design and development of the MixMatch project website.',
-  },
-  {
-    name: 'Dean Husain',
-    role: 'Team Leader & Backend Development',
-    image: '/team/dean.jpg',
-    description:
-      'Led project coordination, supported implementation planning, and contributed to backend development and overall technical direction.',
-  },
-  {
-    name: 'Keerthi Kapavarapu',
-    role: 'Frontend Development',
-    image: '/team/keerthi.jpg',
-    description:
-      'Contributed to the user experience and supported development across core screens, interaction flow, and interface refinement.',
+      'Handled backend development including Gemini integration, Firebase configuration, iTunes API, and TypeScript service files. Also contributed to the profile screen, UI polish, bug fixes, and the final report.',
   },
   {
     name: 'Jennifer Kwon',
-    role: 'Frontend Development',
-    image: '/team/jennifer.jpg',
+    role: 'Frontend Design & Presentation',
+    image: '/jennifer.jpg',
     description:
-      'Assisted with app development, collaborative implementation, and continued refinement of the MixMatch user experience.',
+      'Contributed to the frontend by transitioning Canva designs into React Native screens. Led color theming, overall design direction, and created the final presentation slides.',
+  },
+  {
+    name: 'Keerthi Kapavarapu',
+    role: 'Frontend & App Identity',
+    image: '/keerthi.jpg',
+    description:
+      'Contributed to the frontend by transitioning Canva designs into React Native screens. Worked on privacy screens, led the app identity direction, and contributed to the final report.',
+  },
+  {
+    name: 'Rabdeep Singh',
+    role: 'Frontend & Website Development',
+    image: '/rabdeep.jpg',
+    description:
+      'Built the initial login and registration screens, implemented the 100-message interaction limit, and developed the project website using Next.js before deploying it on Vercel.',
   },
 ];
 
@@ -185,7 +188,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300"
       >
-        Music-Inspired Matching Experience
+        Matching Users Through Music, Not Just Looks
       </motion.p>
 
       <motion.h2
@@ -194,8 +197,9 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="max-w-5xl text-5xl font-bold leading-tight md:text-6xl"
       >
-        A modern matching app built around
-        <span className="text-purple-400"> interaction, style, and identity.</span>
+        Focused on
+        <span className="text-purple-400"> shared taste over appearance</span>
+        , MixMatch helps users discover more meaningful connections through structured profiles, AI-assisted matching, and real-time messaging.
       </motion.h2>
 
       <motion.p
@@ -204,8 +208,8 @@ export default function Home() {
         transition={{ duration: 1 }}
         className="mt-6 text-lg leading-9 text-white/70"
       >
-        MixMatch is a senior project exploring a more immersive matching experience through
-        strong profile presentation, structured interaction flows, and real-time interaction.
+        MixMatch is a full-stack mobile app built with React Native and Firebase, featuring structured profiles, guided interaction flows, and a cohesive mobile UI. 
+        The project emphasizes a more immersive and intentional matching experience that goes beyond the typical swipe model.
       </motion.p>
 
       <div className="mt-8 flex gap-4">
@@ -247,14 +251,10 @@ export default function Home() {
             </p>
             <h3 className="text-4xl font-bold md:text-5xl">What is MixMatch?</h3>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              MixMatch is a mobile app that explores how a matching platform can feel
-              more immersive, intentional, and visually cohesive. Instead of relying only on a
-              generic swipe model, the project emphasizes presentation, categorized discovery,
-              clean profile layouts, and conversation-oriented interaction.
+              MixMatch is a full-stack mobile application that rethinks online dating by shifting from appearance-based swiping to music-centered compatibility. Instead of relying only on photos, the app connects users through shared artists, genres, profile details, and AI-assisted match scoring.
             </p>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              This website serves as a showcase of the app's current interface, design
-              direction, technical structure, and ongoing development progress.
+              Built with React Native and Firebase, the system supports real-time messaging, guided onboarding, and modular user flows for discovery, likes, and communication.
             </p>
           </motion.div>
 
@@ -269,26 +269,23 @@ export default function Home() {
 
             <div className="mt-6 space-y-6">
               <div>
-                <h4 className="text-lg font-semibold text-white">Stronger Visual Identity</h4>
+                <h4 className="text-lg font-semibold text-white">Beyond Appearance-Based Matching</h4>
                 <p className="mt-2 leading-7 text-white/65">
-                  The app uses a distinctive black-and-purple design language to create a more
-                  polished and memorable experience.
+                  Traditional dating apps prioritize visuals, often leading to low-quality matches. MixMatch focuses on shared interests to improve compatibility.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-white">Clearer User Flow</h4>
+                <h4 className="text-lg font-semibold text-white">More Intentional Interaction</h4>
                 <p className="mt-2 leading-7 text-white/65">
-                  Likes, discovery, chat, and profile management are separated into focused screens
-                  that improve structure and usability.
+                  Users connect through shared interests and build conversations over time. Voice calls are introduced after sufficient interaction to support deeper connections.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-white">Current Build Showcase</h4>
+                <h4 className="text-lg font-semibold text-white">AI-Assisted Match Relevance</h4>
                 <p className="mt-2 leading-7 text-white/65">
-                  The website is designed to reflect the app as it currently exists, using updated
-                  screenshots and more accurate project details.
+                  Matches are influenced by shared artists and genres, with AI-assisted scoring to better capture similarity in user taste and improve match relevance beyond surface-level preferences.
                 </p>
               </div>
             </div>
