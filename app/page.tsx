@@ -101,25 +101,25 @@ const screenshots = [
 const teamMembers = [
   {
     name: 'Dean Husan',
-    role: 'Backend & Frontend Development',
+    role: 'Backend & Frontend',
     description:
       'Handled backend development including Gemini integration, Firebase configuration, iTunes API, and TypeScript service files. Also contributed to the profile screen, UI polish, bug fixes, and the final report.',
   },
   {
     name: 'Jennifer Kwon',
-    role: 'Frontend Design & Presentation',
+    role: 'Frontend',
     description:
       'Contributed to the frontend by transitioning Canva designs into React Native screens. Led color theming, overall design direction, and created the final presentation slides.',
   },
   {
     name: 'Keerthi Kapavarapu',
-    role: 'Frontend & App Identity',
+    role: 'Frontend',
     description:
       'Contributed to the frontend by transitioning Canva designs into React Native screens. Worked on privacy screens, led the app identity direction, and contributed to the final report.',
   },
   {
     name: 'Rabdeep Singh',
-    role: 'Frontend & Website Development',
+    role: 'Website',
     description:
       'Built the initial login and registration screens, implemented the 100-message interaction limit, and developed the project website using Next.js before deploying it on Vercel.',
   },
