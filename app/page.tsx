@@ -102,28 +102,24 @@ const teamMembers = [
   {
     name: 'Dean Husan',
     role: 'Backend & Frontend Development',
-    image: '/dean.jpg',
     description:
       'Handled backend development including Gemini integration, Firebase configuration, iTunes API, and TypeScript service files. Also contributed to the profile screen, UI polish, bug fixes, and the final report.',
   },
   {
     name: 'Jennifer Kwon',
     role: 'Frontend Design & Presentation',
-    image: '/jennifer.jpg',
     description:
       'Contributed to the frontend by transitioning Canva designs into React Native screens. Led color theming, overall design direction, and created the final presentation slides.',
   },
   {
     name: 'Keerthi Kapavarapu',
     role: 'Frontend & App Identity',
-    image: '/keerthi.jpg',
     description:
       'Contributed to the frontend by transitioning Canva designs into React Native screens. Worked on privacy screens, led the app identity direction, and contributed to the final report.',
   },
   {
     name: 'Rabdeep Singh',
     role: 'Frontend & Website Development',
-    image: '/rabdeep.jpg',
     description:
       'Built the initial login and registration screens, implemented the 100-message interaction limit, and developed the project website using Next.js before deploying it on Vercel.',
   },
@@ -467,18 +463,11 @@ export default function Home() {
                 transition={{ duration: 0.55, delay: index * 0.07 }}
                 className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20 transition hover:border-purple-400/30"
               >
-              <div className="mb-5 flex justify-center">
-  <img
-    src={member.image}
-    alt={member.name}
-    className="h-20 w-20 rounded-full object-cover border-2 border-purple-400/40 shadow-lg hover:scale-105 transition duration-300"
-  />
-</div>
-        
+                <h4 className="mt-3 text-xl font-semibold text-white">{member.name}</h4>
+                
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
                   {member.role}
                 </p>
-                <h4 className="mt-3 text-xl font-semibold text-white">{member.name}</h4>
                 <p className="mt-3 min-h-[110px] text-sm leading-7 text-white/60">
                   {member.description}
                 </p>
